@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: action/checkout@v3
+    - uses: actions/checkout@v3
   
     - name: Setup .NET
-      uses: actions/setup@v3
+      uses: actions/setup-dotnet@v3
       with:
         dontnet-version: '8.0.x'
   
@@ -25,4 +25,4 @@ jobs:
       run: dotnet build ./Todos.WepAPI.sln --configuration Release
   
     - name: Publish
-      run: dotnet build ./Todos.WepAPI.sln --configuration Release --no-build
+      run: dotnet publish ./Todos.WepAPI.sln --configuration Release --no-build
