@@ -10,7 +10,7 @@ app.UseSwaggerUI();
 
 app.MapGet("/", () => "Hello World!");
 app.MapGet("/getAll", () =>Results.Ok( new List<string>() 
-{ "1", "2"
+{ "1", "2" , "3", "4", "5"
 }));
 
 app.MapGet("/create", (string work) => 
